@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,700;1,400&display=swap');
+
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+/* =========== HEADER =========== */
+
+header {
+    background-color: #722f37;
+}
+
+.logo > img {
+    width: 80px;
+    margin-right: 12px;
+}
+
+/* =========== CONTENT =========== */
+
+.content {
+    display: flex;
+    padding-top: calc(40px + 96px);
+}
+
+.content > div {
+    width: 50%;
+}
+
+.content-photo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.photo {
+    width: 360px;
+    height: 360px;
+    background-image: url(../img/brazil.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    transition: filter .4s ease-in-out, transform .3s ease-in-out;
+}
+
+.photo:hover {
+    filter: brightness(1.0);
+    transform: scale(1.02, 1.02);
+}
+
+.content-description {
+    height: 650px;
+    line-height: 35px;
+}
+
+.content-description > h2 {
+    margin-bottom: 30px;
+}
+
+/* =========== FOOTER =========== */
+
+footer {
+    background-color: #722f37;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 80px;
+}
+
+.rodape {
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+.social-media {
+    display: flex;
+}
+
+.social-media > a > img {
+    width: 30px;
+    margin-right: 20px;
+    transition: filter 0.15s ease-in-out;
+}
+
+.social-media > a > img:hover {
+    filter: brightness(0.7);
+}
+
+.copyright {
+    font-style: italic;
+}
+
+/* ============== CSS BOOTSTRAP ================ */
+
+.navbar-nav > .active {
+    font-weight: 700;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+/* ============== RESPONSIVE ================ */
+@media screen and (max-width: 1024px) {
+    .content {
+        flex-direction: column;
+    }
+
+    .content > div {
+        width: 100%;
+    }
+
+    .content-photo {
+        margin-bottom: 70px;
+    }
+
+    .photo {
+        width: 300px;
+        height: 300px;
+    }
+
+    .content-description {
+        font-size: 1.6rem;
+    }
+} 

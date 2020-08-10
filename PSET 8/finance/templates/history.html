@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    History
+{% endblock %}
+
+{% block main %}
+    <table class = "table table-striped">
+        <thead>
+            <tr>
+                <th>Symbol</th>
+                <th>Shares</th>
+                <th>Price</th>
+                <th>Transacted</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for h in history %}
+                <tr>
+                    <td>{{ h.symbol }}</td>
+                    <td>{{ h.amount }}</td>
+                    <td>${% if h.amount < 0 %}
+                            ${{ "{:,.2f}".format(h.value / (h.amount * -1)) }}</td>
+                        {% else %}
+                               ${{ "{:,.2f}".format(h.value / h.amount) }}</td>
+                        {% endif %}
+                    <td>{{ h.date }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+{% endblock %}

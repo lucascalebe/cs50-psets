@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+
+{% block title %}
+ {% if request.method == "GET" %}
+Quote
+{% else %}
+Quoted
+{% endif %}
+{% endblock %}
+
+{% block main %}
+    {% if request.method == "GET" %}
+    <form  name="quoteForm" action="/quote"  onsubmit="return check()" method="post">
+        <div class="form-group">
+            <input autocomplete="off" autofocus class="form-control" name="symbol" placeholder="Symbol" type="text">
+        </div>
+        <button id="quote" class="btn btn-primary" type="submit">Quote</button>
+    </form>
+    <script>
+        function check() {
+            if (document.forms["quoteForm"]["symbol"].value === "") {
+                window.alert("Field can't be empty")
+                return false
+            }
+        }
+    </script>
+    {% else %}
+        <p>A share of {{stock['name']}} ({{ stock['symbol']}}) costs ${{stock['price']}}</p>
+    {% endif %}
+
+{% endblock %}

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/welcome.css">
+    <title>Lucas Calebe - CS50</title>
+</head>
+    <body>
+        <header class="fixed-top">
+            <nav class="navbar navbar-expand-lg navbar-dark container">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <a href="welcome.html" class="logo"><img src="./img/harvard.png" alt="harvard logo"></a>
+
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item ">
+                            <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="computerScience.html">Computer Science</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="music.html">Music</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="homeland.html">Homeland</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <section>
+            <div class="background-image"></div>
+            <div class="container section-content">
+                <div class="content">
+                    <div id="click" class="welcome">
+                        <span><strong>Welcome to my cs50 page</strong></span>
+                    </div>
+                    <div class="overview">
+                        <h1><strong>Overview</strong></h1>
+
+                        <p>My name is Lucas Calebe, I'm 17 years old and i live in Brasilia, capital of Brazil.</p>
+                        <br>
+                        <p>I came from a simple family, my mother was born in Santa Maria da Vitoria, a small rural town in the northeast of Brazil.
+                        When she was young, she went to Brasilia to look for a better future, and when she was 19 she met my father, that was born in Fortaleza,
+                        a city that's also in the northeast of Brazil.</p>
+                    </div>
+                </div>
+                <div class="select-resume">
+                    <div onclick="changeContext(true)"></div>
+                    <div onclick="changeContext(false)"></div>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <div class="container rodape">
+                <div class="social-media">
+                    <a href="https://www.github.com/lucascalebe" target="_blank">
+                        <img src="./img/github.png" alt="Github">
+                    </a>
+                    <a href="https://br.linkedin.com/in/lucas-calebe-73263290" target="_blank">
+                        <img src="./img/linkedin.png" alt="LinkedIn">
+                    </a>
+                </div>
+                <div class="copyright">
+                    <span>&copy;LucasCalebe</span>
+                </div>
+            </div>
+        </footer>
+
+        <script src="./js/app.js"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    </body>
+</html>

@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Buy
+{% endblock %}
+
+{% block main %}
+    <form name="buyForm" onsubmit="return check()" action="/buy" method="post">
+        <div class="form-group">
+            <input autocomplete="off" autofocus class="form-control" name="symbol" placeholder="Symbol" type="text">
+        </div>
+        <div class="form-group">
+            <input autocomplete="off" class="form-control" min="1" name="amount" placeholder="Shares" type="number">
+        </div>
+        <button class="btn btn-primary" type="submit">Buy</button>
+    </form>
+    <script>
+        function check() {
+            if (document.forms["buyForm"]["symbol"].value === "" || document.forms["buyForm"]["shares"].value === "") {
+                window.alert("Field can't be empty")
+                return false
+            }
+        }
+    </script>
+{% endblock %}

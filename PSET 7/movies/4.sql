@@ -1,0 +1,1 @@
+SELECT COUNT(rating) AS countBest FROM ratings where rating = 10.0;
